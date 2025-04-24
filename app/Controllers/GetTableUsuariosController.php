@@ -11,6 +11,8 @@ class GetTableUsuariosController extends BaseController
 
         $query = $usuariosModels->findById(1);
 
-        var_dump($query);
+        $this->response->setContentType('application/json');
+
+        return json_encode($query);
     }
 }
